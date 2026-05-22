@@ -227,38 +227,42 @@
               </p>
               <ul class="tl-list">
                 <li>
-                  Developed a multimodal computer vision pipeline integrating
-                  YOLO instance segmentation, OpenCV, and vision–language
-                  transformers for automated crop disease detection from UAV
-                  imagery.
+                  Solely built the data infrastructure using AWS S3 and Python
+                  to automate ingestion, transformation, and structured storage
+                  of <strong>3,500+ high-resolution RGB and multispectral UAV
+                  field images</strong> — handling everything from raw drone
+                  upload to training-ready dataset organization.
                 </li>
                 <li>
-                  Fine-tuned Hugging Face transformer models on 70,000+ QA pairs
-                  for semantic disease classification, reaching
-                  <strong>98% accuracy</strong> across 12+ disease classes.
-                </li>
-                <li>
-                  Trained deep learning models on 3,500+ UAV field images with
-                  CUDA-accelerated GPU compute on Linux HPC clusters (Sapelo2),
-                  reaching <strong>85% mAP</strong> under real agricultural
+                  Trained YOLO instance segmentation models on 3,500+ UAV field
+                  images using CUDA-accelerated GPU compute on Linux HPC
+                  clusters, reaching <strong>85% mAP</strong> across 6+ crop
+                  disease classes under real uncontrolled agricultural field
                   conditions.
                 </li>
                 <li>
-                  Deployed GPU-backed ML inference services via FastAPI,
-                  integrated into a Flutter mobile app for real-time crop
-                  disease detection and geospatial visualization at sub-second
-                  latency.
+                  Fine-tuned Hugging Face transformer models on 70,000+
+                  structured disease-symptom text pairs for semantic disease
+                  classification, achieving <strong>98% accuracy</strong> on a
+                  balanced held-out evaluation set across 6+ disease classes.
                 </li>
                 <li>
-                  Designed a cloud-integrated ETL pipeline using AWS S3 and
-                  Python to automate ingestion and structured storage of
-                  high-resolution RGB and multispectral drone imagery at scale.
+                  Built a multimodal inference pipeline combining YOLO, OpenCV,
+                  and CLIP zero-shot inference to classify crop diseases against
+                  natural language labels without retraining — enabling rapid
+                  extension to new diseases without additional labeled data.
                 </li>
                 <li>
-                  Contributed to a U-Net deep learning framework for
-                  spatiotemporal precipitation forecasting by preprocessing 13
-                  years of hourly meteorological data (MRMS, PRISM, gauge) on
-                  Linux HPC systems.
+                  Deployed a FastAPI GPU inference service integrated into a
+                  Flutter mobile app, delivering real-time crop disease detection
+                  with GPS-tagged field overlays at
+                  <strong>less than 200ms end-to-end latency</strong>.
+                </li>
+                <li>
+                  Piloted the system with <strong>25 Georgia farmers</strong>
+                  across active fields — all 25 continued using the app
+                  post-pilot, validating real-world adoption beyond controlled
+                  testing.
                 </li>
               </ul>
               <div class="tag-row">
@@ -284,46 +288,50 @@
               <p class="tl-org">Persist Ventures &nbsp;·&nbsp; Remote, India</p>
               <ul class="tl-list">
                 <li>
-                  Led architecture and delivery of the Portal module,
-                  contributing <strong>&gt;70% of production code</strong>
-                  across critical components in Java Spring Boot, AWS, Pulumi,
-                  and gRPC.
+                  Delivered full-stack mobile applications for
+                  <strong>3 startup clients</strong> across diverse domains —
+                  voice assistant, social dating, and media creation — owning
+                  both Flutter frontend and Spring Boot backend across the entire
+                  development lifecycle.
                 </li>
                 <li>
-                  Built a backend-driven UI platform enabling dynamic UI
-                  generation; introduced a manifest-driven architecture for
-                  page, widget, and API generation that cut runtime by
-                  <strong>80%</strong>.
+                  Designed and implemented <strong>30+ RESTful API endpoints</strong>
+                  using Spring Boot across 2 client projects, covering
+                  authentication, user data, and core business logic; validated
+                  all contracts using Postman before mobile integration.
                 </li>
                 <li>
-                  Designed a scalable RBAC system with fine-grained permissions,
-                  JWT authentication, and cloud infrastructure provisioned via
-                  Pulumi (IaC) on AWS ECS with ELB.
+                  Architected client applications using MVVM pattern with
+                  <strong>BLoC / Provider state management</strong>, ensuring
+                  clean separation of business logic from UI across 3 concurrent
+                  startup engagements with fast-changing requirements.
                 </li>
                 <li>
-                  Shipped a real-time feed processing system for commodities
-                  (gold, silver) using Spring Boot and AWS, exposing low-latency
-                  REST APIs consumed by mobile clients.
+                  Integrated Firebase Auth, Firestore, and Cloud Functions as
+                  the complete backend stack for the voice assistant application,
+                  handling real-time data sync, user authentication, and
+                  server-side triggers without dedicated infrastructure overhead.
                 </li>
                 <li>
-                  Engineered a Gemini-powered CI code review pipeline integrated
-                  with GitHub MCP, cutting review turnaround by
-                  <strong>40%</strong>.
+                  Built a library of <strong>20+ reusable Flutter components</strong>
+                  standardized across all client projects, saving an estimated
+                  3–4 developer-hours per sprint and eliminating redundant UI
+                  scaffolding across the team.
                 </li>
                 <li>
-                  Shipped production cross-platform apps in Flutter and React
-                  Native with Riverpod/Redux state management and Firebase
-                  integration — reducing server response times by
-                  <strong>30%</strong> and bug occurrences by
-                  <strong>35%</strong>.
+                  Managed end-to-end feature delivery across 3 simultaneous
+                  client projects — from API design and database integration
+                  (PostgreSQL, MongoDB, Firestore) to Flutter UI implementation —
+                  consistently meeting client milestones in an agile service
+                  environment.
                 </li>
               </ul>
               <div class="tag-row">
-                <span class="tag">Java</span><span class="tag">Spring Boot</span
-                ><span class="tag">AWS</span><span class="tag">Pulumi</span
-                ><span class="tag">gRPC</span><span class="tag">Flutter</span
-                ><span class="tag">React Native</span
-                ><span class="tag">Firebase</span>
+                <span class="tag">Flutter</span><span class="tag">Spring Boot</span
+                ><span class="tag">Firebase</span><span class="tag">BLoC</span
+                ><span class="tag">MVVM</span><span class="tag">REST APIs</span
+                ><span class="tag">PostgreSQL</span
+                ><span class="tag">MongoDB</span>
               </div>
             </div>
           </div>
