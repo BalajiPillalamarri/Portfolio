@@ -3,1097 +3,680 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Balaji Pillalamarri — AI/ML Engineer</title>
+    <title>Balaji Pillalamarri — AI Engineer</title>
+    <meta
+      name="description"
+      content="AI Engineer with 5+ years across ML and backend — production GenAI in banking: LangGraph agents, hybrid RAG, self-hosted vLLM serving 500K+ MAU."
+    />
+    <meta name="theme-color" content="#faf8f5" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Custom cursor -->
-    <div class="cursor-dot" id="cursorDot"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
+    <div class="progress" id="progress"></div>
 
-    <!-- Nav -->
-    <nav id="nav">
-      <div class="nav-inner">
+    <!-- ─────────────────────────── NAV ─────────────────────────── -->
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
         <a href="#home" class="nav-logo">
-          <span class="bracket">[</span>bp<span class="bracket">]</span>
+          <span class="logo-mark">BP</span>
+          <span class="logo-text">Balaji Pillalamarri</span>
         </a>
-        <ul class="nav-links">
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact" class="btn-nav">Contact</a></li>
-        </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+            <svg class="ic-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg class="ic-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+          </button>
+          <a href="#contact" class="btn btn-sm">Get in touch</a>
+          <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
       </div>
-    </nav>
+    </header>
 
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#experience" class="mobile-link">Experience</a>
-      <a href="#projects" class="mobile-link">Projects</a>
-      <a href="#skills" class="mobile-link">Skills</a>
-      <a href="#education" class="mobile-link">Education</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
 
-    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <!-- ─────────────────────────── HERO ─────────────────────────── -->
     <section id="home" class="hero">
-      <canvas id="heroCanvas"></canvas>
-
-      <div class="hero-inner">
-        <!-- Left: Text -->
-        <div class="hero-text">
-          <div class="hero-eyebrow fade-in">
-            <span class="mono-label">01 /</span> Introduction
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="pill reveal">
+            <span class="dot"></span>
+            Open to AI Engineering roles
           </div>
 
-          <h1 class="hero-name fade-in">
-            <span class="name-first glitch" data-text="Balaji">Balaji</span>
-            <span class="name-last">Pillalamarri</span>
+          <h1 class="hero-title reveal">
+            Balaji<br />
+            Pillalamarri
           </h1>
 
-          <p class="hero-typed fade-in">
-            <span id="typed"></span><span class="cursor">_</span>
+          <p class="hero-role reveal">
+            <span class="mono">AI Engineer</span>
+            <span class="sep"></span>
+            <span class="mono muted">San Jose, CA</span>
           </p>
 
-          <p class="hero-desc fade-in">
-            M.S. Computer Science &nbsp;·&nbsp; University of Georgia
+          <p class="lede reveal">
+            5+ years across ML and backend, now shipping production GenAI in
+            banking — <em>LangGraph</em> agents and hybrid RAG on self-hosted
+            vLLM serving <strong>500K+ MAU</strong>, with fine-tuning,
+            guardrails, and the evaluation and observability stack behind them.
+            Prior ML at scale on 400M+ record pipelines.
           </p>
 
-          <div class="hero-actions fade-in">
-            <a href="#projects" class="btn-primary magnetic">
-              <span>View My Work</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
+          <div class="hero-actions reveal">
+            <a href="#work" class="btn btn-primary">
+              See selected work
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
-            <a
-              href="mailto:balajipillalamarri100@gmail.com"
-              class="btn-outline magnetic"
-            >
-              <span>Say Hello</span>
-            </a>
+            <a href="mailto:balajipillalamarri01@gmail.com" class="btn">Say hello</a>
           </div>
 
-          <div class="hero-socials fade-in">
-            <a
-              href="https://github.com/balajipillalamarri"
-              target="_blank"
-              rel="noopener"
-              class="social-chip"
-            >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                />
-              </svg>
+          <div class="hero-links reveal">
+            <a href="https://github.com/BalajiPillalamarri" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" /></svg>
               GitHub
             </a>
-            <a
-              href="https://www.linkedin.com/in/balajip30/"
-              target="_blank"
-              rel="noopener"
-              class="social-chip"
-            >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
+            <a href="https://www.linkedin.com/in/balaji30p" target="_blank" rel="noopener">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
               LinkedIn
             </a>
-            <a
-              href="mailto:balajipillalamarri100@gmail.com"
-              class="social-chip"
-            >
-              <svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
+            <a href="mailto:balajipillalamarri01@gmail.com">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2.5" /><path d="m22 7.5-9.1 5.6a1.8 1.8 0 0 1-1.8 0L2 7.5" /></svg>
               Email
             </a>
           </div>
         </div>
 
-        <!-- Right: Photo -->
-        <div class="hero-photo-side fade-in">
-          <div class="photo-wrap">
-            <div class="photo-ring-spin"></div>
-            <div class="photo-inner">
-              <img
-                src="avatar.jpg"
-                alt="Balaji Pillalamarri"
-                class="avatar-img"
-              />
-            </div>
-            <div class="photo-glow"></div>
-          </div>
-          <div class="availability-pill">
-            <span class="avail-dot"></span>
-            Available for AI/ML Roles
+        <div class="hero-visual reveal">
+          <figure class="portrait">
+            <img src="avatar.jpg" alt="Portrait of Balaji Pillalamarri" />
+          </figure>
+          <div class="portrait-note">
+            <span class="mono muted">Currently</span>
+            <span>AI Engineer, PNC Financial Services</span>
           </div>
         </div>
       </div>
 
-      <!-- Stats bar -->
-      <div class="stats-bar fade-in">
-        <div class="stat">
-          <span class="stat-value"
-            ><span class="count" data-target="2">0</span>+</span
-          >
-          <span class="stat-label">Years Exp.</span>
+      <div class="container">
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat-num"><span class="count" data-target="5">0</span>+</span>
+            <span class="stat-label">Years across ML &amp; backend</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num"><span class="count" data-target="500">0</span>K+</span>
+            <span class="stat-label">Monthly active users served</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num"><span class="count" data-target="400">0</span>M+</span>
+            <span class="stat-label">Records modeled in production</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">&lt;<span class="count" data-target="500">0</span>ms</span>
+            <span class="stat-label">p95 time-to-first-token</span>
+          </div>
         </div>
-        <div class="stat-sep"></div>
-        <div class="stat">
-          <span class="stat-value"
-            ><span class="count" data-target="5">0</span>+</span
-          >
-          <span class="stat-label">AI Projects</span>
-        </div>
-        <div class="stat-sep"></div>
-        <div class="stat">
-          <span class="stat-value">3.87</span>
-          <span class="stat-label">GPA</span>
-        </div>
-      </div>
-
-      <div class="scroll-cue">
-        <div class="scroll-mouse">
-          <div class="scroll-wheel"></div>
-        </div>
-        <span class="scroll-label">scroll</span>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
-    <section id="experience" class="section">
+    <!-- ─────────────────────────── MARQUEE ─────────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>LangGraph</span><span>·</span><span>vLLM</span><span>·</span><span>Hybrid RAG</span><span>·</span><span>OpenSearch</span><span>·</span><span>Neo4j</span><span>·</span><span>RAGAS</span><span>·</span><span>PyTorch</span><span>·</span><span>LoRA / DPO</span><span>·</span><span>FastAPI</span><span>·</span><span>Kubernetes</span><span>·</span><span>Arize Phoenix</span><span>·</span><span>XGBoost</span><span>·</span><span>Databricks</span><span>·</span>
+        <span>LangGraph</span><span>·</span><span>vLLM</span><span>·</span><span>Hybrid RAG</span><span>·</span><span>OpenSearch</span><span>·</span><span>Neo4j</span><span>·</span><span>RAGAS</span><span>·</span><span>PyTorch</span><span>·</span><span>LoRA / DPO</span><span>·</span><span>FastAPI</span><span>·</span><span>Kubernetes</span><span>·</span><span>Arize Phoenix</span><span>·</span><span>XGBoost</span><span>·</span><span>Databricks</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ─────────────────────────── FOCUS ─────────────────────────── -->
+    <section class="section" id="focus">
       <div class="container">
-        <div class="sec-header reveal">
-          <span class="mono-label">02 /</span>
-          <h2 class="sec-title">Experience</h2>
-          <p class="sec-sub">Where I've built and researched</p>
+        <div class="sec-head reveal">
+          <span class="mono label">01 / What I build</span>
+          <h2 class="sec-title">Three things I keep coming back to</h2>
+        </div>
+
+        <div class="focus-grid">
+          <article class="focus-card tint-sage reveal">
+            <span class="focus-num mono">01</span>
+            <h3>Agentic systems</h3>
+            <p>
+              LangGraph graphs with typed state, conditional routing and Redis
+              checkpointing; small-model intent routing, semantic caching, and
+              six production agents sharing one document pipeline.
+            </p>
+          </article>
+
+          <article class="focus-card tint-sky reveal">
+            <span class="focus-num mono">02</span>
+            <h3>Retrieval &amp; knowledge</h3>
+            <p>
+              Hybrid RAG over OpenSearch HNSW k-NN with BGE cross-encoder
+              reranking, plus a Neo4j knowledge graph for relational fee and
+              eligibility queries that flat retrieval can't answer.
+            </p>
+          </article>
+
+          <article class="focus-card tint-clay reveal">
+            <span class="focus-num mono">03</span>
+            <h3>Evaluation &amp; reliability</h3>
+            <p>
+              Golden-set CI gates, adversarial suites, shadow and canary rollouts
+              with auto-rollback, faithfulness monitoring, and validators that
+              diff every numeric claim against the source API.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── WORK ─────────────────────────── -->
+    <section class="section section-alt" id="work">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="mono label">02 / Selected work</span>
+          <h2 class="sec-title">Systems shipped to production</h2>
+          <p class="sec-sub">
+            Six builds that carry real traffic, real money, or real research
+            results.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">01</span>
+              <span class="chip chip-sage">PNC Financial Services</span>
+            </header>
+            <h3>Conversational banking assistant</h3>
+            <p>
+              A customer-facing assistant on LangGraph — typed state, conditional
+              routing, Redis checkpointing — pairing Mistral 7B intent routing
+              with a RedisVL semantic cache hitting 31% of traffic.
+            </p>
+            <ul class="metrics">
+              <li><b>500K+</b> MAU</li>
+              <li><b>&lt;500ms</b> p95 TTFT</li>
+              <li><b>−10%</b> call volume</li>
+            </ul>
+            <div class="tags">
+              <span>LangGraph</span><span>Mistral 7B</span><span>RedisVL</span><span>Redis</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">02</span>
+              <span class="chip chip-sage">PNC Financial Services</span>
+            </header>
+            <h3>Document AI platform</h3>
+            <p>
+              A reusable service doing PaddleOCR detection and recognition,
+              layout detection, LayoutReader ordering, and VLM table/chart
+              extraction — one pipeline feeding six production agents, with a
+              Pydantic schema registry so each agent pulls only its own fields.
+            </p>
+            <ul class="metrics">
+              <li><b>94%</b> F1</li>
+              <li><b>20+</b> doc types</li>
+              <li><b>1,000+</b> docs/day</li>
+            </ul>
+            <div class="tags">
+              <span>PaddleOCR</span><span>LayoutReader</span><span>VLM</span><span>Pydantic</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">03</span>
+              <span class="chip chip-sage">PNC Financial Services</span>
+            </header>
+            <h3>Hybrid RAG + knowledge graph</h3>
+            <p>
+              OpenSearch HNSW k-NN retrieval reranked by a BGE cross-encoder,
+              joined to a Neo4j knowledge graph for relational fee and
+              eligibility lookups — policy questions went from minutes to
+              seconds, with hardened citations.
+            </p>
+            <ul class="metrics">
+              <li><b>+28%</b> NDCG@10</li>
+              <li><b>Minutes → seconds</b> lookups</li>
+            </ul>
+            <div class="tags">
+              <span>OpenSearch</span><span>BGE reranker</span><span>Neo4j</span><span>Hybrid search</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">04</span>
+              <span class="chip chip-sage">PNC Financial Services</span>
+            </header>
+            <h3>Evaluation &amp; serving stack</h3>
+            <p>
+              Fine-tuned, self-hosted Llama 3 Nemotron 49B and Mistral 7B on
+              vLLM over EKS H100s (FP8, tensor parallelism, PagedAttention,
+              prefix caching) with LiteLLM routing and Bedrock failover — behind
+              a three-tier evaluation framework that blocks merges.
+            </p>
+            <ul class="metrics">
+              <li><b>0.85</b> RAGAS CI gate</li>
+              <li><b>0.92</b> faithfulness floor</li>
+              <li><b>200</b> adversarial prompts</li>
+            </ul>
+            <div class="tags">
+              <span>vLLM</span><span>LiteLLM</span><span>RAGAS</span><span>Arize Phoenix</span><span>EKS</span>
+            </div>
+          </article>
+
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">05</span>
+              <span class="chip chip-sky">University of Georgia</span>
+            </header>
+            <h3>Multimodal plant disease classifier</h3>
+            <p>
+              A CLIP vision encoder fused with a DeBERTa text encoder over ~30K
+              labeled symptom descriptions through a trained late-fusion head,
+              extended with 14-day severity forecasting off Open-Meteo weather
+              data and served via async FastAPI to a Flutter client.
+            </p>
+            <ul class="metrics">
+              <li><b>94.7%</b> top-1, 12 classes</li>
+              <li><b>+6 pts</b> over image-only</li>
+              <li><b>0.42</b> forecast MAE</li>
+            </ul>
+            <div class="tags">
+              <span>CLIP</span><span>DeBERTa</span><span>Transformers</span><span>OpenCV</span><span>FastAPI</span>
+            </div>
+            <p class="work-note">Presented at ASABE Annual International Meeting 2026.</p>
+          </article>
+
+          <article class="work-card reveal">
+            <header class="work-top">
+              <span class="work-num mono">06</span>
+              <span class="chip chip-clay">Capgemini</span>
+            </header>
+            <h3>Real-time card fraud detection</h3>
+            <p>
+              Replaced a 200-rule engine for a retail bank with a calibrated
+              XGBoost model (Optuna-tuned, isotonic recalibration) served on
+              FastAPI, Docker and Kubernetes with Redis-backed velocity features
+              — inside a 100ms authorization SLA.
+            </p>
+            <ul class="metrics">
+              <li><b>35ms</b> p99 @ 1,500 TPS</li>
+              <li><b>400M</b> transactions</li>
+            </ul>
+            <div class="tags">
+              <span>XGBoost</span><span>Optuna</span><span>FastAPI</span><span>Kubernetes</span><span>Redis</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── EXPERIENCE ─────────────────────────── -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="mono label">03 / Experience</span>
+          <h2 class="sec-title">Where I've done the work</h2>
         </div>
 
         <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-aside">
-              <span class="tl-date">Jan 2025 – May 2026</span>
-              <div class="tl-track">
-                <div class="tl-dot"></div>
-                <div class="tl-line"></div>
-              </div>
+          <article class="job reveal">
+            <div class="job-meta">
+              <span class="mono job-date">Nov 2025 — Present</span>
+              <span class="job-loc">Remote</span>
             </div>
-            <div class="tl-card">
-              <div class="card-glow"></div>
-              <h3 class="tl-role">Applied AI Engineer</h3>
-              <p class="tl-org">
-                Precision Crop Protection Lab &nbsp;·&nbsp; Athens, GA
-              </p>
-              <ul class="tl-list">
+            <div class="job-body">
+              <h3 class="job-role">AI Engineer</h3>
+              <p class="job-org">PNC Financial Services</p>
+              <ul class="job-points">
                 <li>
-                  Solely built the data infrastructure using AWS S3 and Python
-                  to automate ingestion, transformation, and structured storage
-                  of <strong>3,500+ high-resolution RGB and multispectral UAV
-                  field images</strong> — handling everything from raw drone
-                  upload to training-ready dataset organization.
+                  Built a customer-facing banking assistant on
+                  <b>LangGraph</b> (typed state, conditional routing, Redis
+                  checkpointing) serving <b>500K+ MAU</b>, pairing Mistral 7B
+                  intent routing with a 31%-hit RedisVL semantic cache to hold
+                  p95 time-to-first-token under 500ms and cut call-center volume
+                  10%.
                 </li>
                 <li>
-                  Trained YOLO instance segmentation models on 3,500+ UAV field
-                  images using CUDA-accelerated GPU compute on Linux HPC
-                  clusters, reaching <strong>85% mAP</strong> across 6+ crop
-                  disease classes under real uncontrolled agricultural field
-                  conditions.
+                  Architected a reusable <b>Document AI service</b> with
+                  PaddleOCR detection/recognition, layout detection,
+                  LayoutReader ordering and VLM table and chart extraction,
+                  parsing <b>20+ document types at 94% F1</b> across 1,000+
+                  docs/day — cutting manual processing 70% and serving six
+                  production agents from one shared pipeline.
                 </li>
                 <li>
-                  Fine-tuned Hugging Face transformer models on 70,000+
-                  structured disease-symptom text pairs for semantic disease
-                  classification, achieving <strong>98% accuracy</strong> on a
-                  balanced held-out evaluation set across 6+ disease classes.
+                  Designed a <b>Pydantic schema registry</b> and LLM extraction
+                  layer letting each agent pull its own fields from shared parsed
+                  output, with cross-document validation (fuzzy name matching,
+                  income variance thresholds, recency checks) flagging
+                  package-level inconsistencies for human review.
                 </li>
                 <li>
-                  Built a multimodal inference pipeline combining YOLO, OpenCV,
-                  and CLIP zero-shot inference to classify crop diseases against
-                  natural language labels without retraining — enabling rapid
-                  extension to new diseases without additional labeled data.
+                  Fine-tuned and self-hosted <b>Llama 3 Nemotron 49B and Mistral
+                  7B</b> on vLLM/EKS H100s (FP8, tensor parallelism,
+                  PagedAttention, prefix caching) with LiteLLM routing and
+                  Bedrock failover, lowering inference cost vs. external APIs
+                  while keeping all customer data in-VPC for PCI DSS and GLBA.
                 </li>
                 <li>
-                  Deployed a FastAPI GPU inference service integrated into a
-                  Flutter mobile app, delivering real-time crop disease detection
-                  with GPS-tagged field overlays at
-                  <strong>less than 200ms end-to-end latency</strong>.
+                  Designed <b>hybrid RAG</b> combining OpenSearch HNSW k-NN with
+                  BGE cross-encoder reranking (+28% NDCG@10) and a Neo4j
+                  knowledge graph for relational fee and eligibility queries,
+                  dropping policy lookups from minutes to seconds and hardening
+                  citation accuracy.
                 </li>
                 <li>
-                  Piloted the system with <strong>25 Georgia farmers</strong>
-                  across active fields — all 25 continued using the app
-                  post-pilot, validating real-world adoption beyond controlled
-                  testing.
-                </li>
-              </ul>
-              <div class="tag-row">
-                <span class="tag">PyTorch</span><span class="tag">YOLO</span
-                ><span class="tag">Hugging Face</span>
-                <span class="tag">FastAPI</span><span class="tag">AWS S3</span
-                ><span class="tag">CUDA</span><span class="tag">U-Net</span
-                ><span class="tag">Flutter</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="tl-item reveal">
-            <div class="tl-aside">
-              <span class="tl-date">July 2022 – Aug 2024</span>
-              <div class="tl-track">
-                <div class="tl-dot"></div>
-              </div>
-            </div>
-            <div class="tl-card">
-              <div class="card-glow"></div>
-              <h3 class="tl-role">Software Development Engineer</h3>
-              <p class="tl-org">Persist Ventures &nbsp;·&nbsp; Remote, India</p>
-              <ul class="tl-list">
-                <li>
-                  Delivered full-stack mobile applications for
-                  <strong>3 startup clients</strong> across diverse domains —
-                  voice assistant, social dating, and media creation — owning
-                  both Flutter frontend and Spring Boot backend across the entire
-                  development lifecycle.
-                </li>
-                <li>
-                  Designed and implemented <strong>30+ RESTful API endpoints</strong>
-                  using Spring Boot across 2 client projects, covering
-                  authentication, user data, and core business logic; validated
-                  all contracts using Postman before mobile integration.
-                </li>
-                <li>
-                  Architected client applications using MVVM pattern with
-                  <strong>BLoC / Provider state management</strong>, ensuring
-                  clean separation of business logic from UI across 3 concurrent
-                  startup engagements with fast-changing requirements.
-                </li>
-                <li>
-                  Integrated Firebase Auth, Firestore, and Cloud Functions as
-                  the complete backend stack for the voice assistant application,
-                  handling real-time data sync, user authentication, and
-                  server-side triggers without dedicated infrastructure overhead.
-                </li>
-                <li>
-                  Built a library of <strong>20+ reusable Flutter components</strong>
-                  standardized across all client projects, saving an estimated
-                  3–4 developer-hours per sprint and eliminating redundant UI
-                  scaffolding across the team.
-                </li>
-                <li>
-                  Managed end-to-end feature delivery across 3 simultaneous
-                  client projects — from API design and database integration
-                  (PostgreSQL, MongoDB, Firestore) to Flutter UI implementation —
-                  consistently meeting client milestones in an agile service
-                  environment.
+                  Shipped a three-tier evaluation framework with a
+                  <b>RAGAS golden-set CI gate</b> at 0.85+ and a 200-prompt
+                  adversarial suite blocking merges; implemented shadow/canary
+                  rollout with auto-rollback, Arize Phoenix faithfulness
+                  monitoring at 0.92+, and an output validator diffing every
+                  numeric claim against raw API results.
                 </li>
               </ul>
-              <div class="tag-row">
-                <span class="tag">Flutter</span><span class="tag">Spring Boot</span
-                ><span class="tag">Firebase</span><span class="tag">BLoC</span
-                ><span class="tag">MVVM</span><span class="tag">REST APIs</span
-                ><span class="tag">PostgreSQL</span
-                ><span class="tag">MongoDB</span>
-              </div>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-meta">
+              <span class="mono job-date">Dec 2024 — Oct 2025</span>
+              <span class="job-loc">Georgia, USA</span>
+            </div>
+            <div class="job-body">
+              <h3 class="job-role">AI Research Assistant</h3>
+              <p class="job-org">University of Georgia</p>
+              <ul class="job-points">
+                <li>
+                  Built a multimodal plant disease classifier
+                  (<b>Hugging Face Transformers</b>) fusing a CLIP vision encoder
+                  with a DeBERTa text encoder over ~30K labeled symptom
+                  descriptions via a trained late-fusion head —
+                  <b>12 classes at 94.7% top-1</b>, +6 pts over image-only CLIP,
+                  with OpenCV preprocessing (leaf segmentation, normalization,
+                  augmentation) for variable field lighting. Presented at
+                  <b>ASABE Annual International Meeting 2026</b>.
+                </li>
+                <li>
+                  Extended it with severity forecasting driven by a curated
+                  knowledge base of disease-favorable conditions joined to
+                  Open-Meteo forecast data, projecting
+                  <b>14-day progression at MAE 0.42</b> on a 0–5 scale vs. 0.71
+                  naive persistence; served both models behind an async FastAPI
+                  service with multipart upload, batched inference and warm model
+                  loading, consumed by a Flutter client.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-meta">
+              <span class="mono job-date">May 2022 — Jul 2024</span>
+              <span class="job-loc">Hyderabad, India</span>
+            </div>
+            <div class="job-body">
+              <h3 class="job-role">Machine Learning Engineer</h3>
+              <p class="job-org">Capgemini</p>
+              <ul class="job-points">
+                <li>
+                  Built a real-time card fraud detection service for a retail
+                  bank on <b>400M historical transactions</b>, replacing a
+                  200-rule engine with a calibrated XGBoost model (Optuna-tuned,
+                  isotonic recalibration) served via FastAPI, Docker and
+                  Kubernetes with Redis-backed velocity features, holding
+                  <b>p99 latency at 35ms</b> within a 100ms authorization SLA at
+                  1,500 TPS.
+                </li>
+                <li>
+                  Co-designed the <b>MLOps release pipeline</b> using MLflow
+                  Model Registry, Azure DevOps CI/CD, Docker/ACR and Helm canary
+                  deploys, with automated schema, PSI-stability and
+                  offline–online feature-parity gates that cut model release
+                  cycles from <b>5 to 3 weeks</b> and eliminated
+                  training-serving skew incidents.
+                </li>
+                <li>
+                  Rebuilt churn prediction for a telecom operator serving
+                  <b>30M subscribers</b>, engineering a 180-feature PySpark
+                  feature store on Databricks/Delta Lake and shipping weekly
+                  scoring through Azure ML and MLflow with SHAP reason codes
+                  pushed to Salesforce CRM — lifting <b>AUC from 0.71 to
+                  0.86</b> and raising the retention team's save rate from 9.2%
+                  to 14.1% in a controlled A/B test.
+                </li>
+                <li>
+                  Developed SKU-level demand forecasting across
+                  <b>160K weekly product-location series</b>, replacing
+                  promo-blind statistical forecasts with a single global
+                  gradient-boosted model (Tweedie objective, direct
+                  multi-horizon) orchestrated in Airflow on Databricks —
+                  reducing forecast error from 38% to <b>29% WMAPE</b> and
+                  cutting planner overrides from 60% to 35%.
+                </li>
+                <li>
+                  Engineered an automated visual quality inspection system,
+                  training an EfficientNet-B4 classifier (TensorFlow) and YOLOv5
+                  detector (PyTorch) exported through ONNX to TensorRT and served
+                  in Docker on edge GPU servers, achieving
+                  <b>99% defect recall</b> and reducing defect escapes from 0.8%
+                  to 0.2%.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-meta">
+              <span class="mono job-date">Jan 2021 — Apr 2022</span>
+              <span class="job-loc">Hyderabad, India</span>
+            </div>
+            <div class="job-body">
+              <h3 class="job-role">Software Development Engineer</h3>
+              <p class="job-org">Hexaware Technologies</p>
+              <ul class="job-points">
+                <li>
+                  Built backend microservices in <b>Java Spring Boot and
+                  Node.js</b> serving 20K+ active users at 99.9% uptime, with
+                  RESTful APIs secured by JWT and OAuth 2.0 across upstream and
+                  downstream enterprise systems; cut p95 response time
+                  <b>45%</b> via database indexing, query optimization and Redis
+                  caching, validated under concurrency with load testing.
+                </li>
+                <li>
+                  Engineered a <b>Python/SSIS migration pipeline</b> with schema
+                  mappings across 20+ Oracle tables, automated validation and
+                  rollback procedures, moving <b>50M+ records at 99.5%
+                  accuracy</b> with zero downtime; built reusable
+                  React/TypeScript component libraries with Redux, reducing UI
+                  defects 40%.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─────────────────────────── SKILLS ─────────────────────────── -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <div class="sec-head reveal">
+          <span class="mono label">04 / Skills</span>
+          <h2 class="sec-title">The toolkit</h2>
+          <p class="sec-sub">
+            What I reach for, grouped by the part of the system it lives in.
+          </p>
+        </div>
+
+        <div class="skills">
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Languages</h3>
+            <div class="tags tags-lg">
+              <span>Python</span><span>SQL</span><span>Java</span><span>TypeScript</span><span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">GenAI &amp; LLM</h3>
+            <div class="tags tags-lg">
+              <span>Hybrid RAG</span><span>Graph RAG</span><span>Agentic systems</span><span>Multi-agent orchestration</span><span>Tool / function calling</span><span>MCP</span><span>Fine-tuning (LoRA/QLoRA, SFT, DPO)</span><span>Guardrails</span><span>Prompt-injection defense</span><span>Semantic caching</span><span>Cross-encoder reranking</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">GenAI tooling</h3>
+            <div class="tags tags-lg">
+              <span>LangGraph</span><span>LangChain</span><span>LlamaIndex</span><span>LiteLLM</span><span>vLLM</span><span>FP8 / tensor parallelism</span><span>PagedAttention</span><span>RedisVL</span><span>BGE embeddings + reranker</span><span>Hugging Face Transformers</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">ML &amp; deep learning</h3>
+            <div class="tags tags-lg">
+              <span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>Optuna</span><span>SHAP</span><span>OpenCV</span><span>EfficientNet</span><span>YOLOv5</span><span>ONNX</span><span>TensorRT</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Evaluation &amp; observability</h3>
+            <div class="tags tags-lg">
+              <span>RAGAS</span><span>LLM-as-judge</span><span>Golden datasets</span><span>Adversarial / red-team suites</span><span>Shadow &amp; canary testing</span><span>Drift detection</span><span>Arize Phoenix</span><span>Langfuse</span><span>MLflow</span><span>Evidently AI</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Vector &amp; search</h3>
+            <div class="tags tags-lg">
+              <span>OpenSearch (HNSW k-NN)</span><span>pgvector</span><span>FAISS</span><span>Pinecone</span><span>ChromaDB</span><span>Neo4j</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Data &amp; backend</h3>
+            <div class="tags tags-lg">
+              <span>PostgreSQL</span><span>Redis</span><span>Oracle</span><span>Delta Lake</span><span>Databricks</span><span>PySpark</span><span>Airflow</span><span>PaddleOCR</span><span>SSIS</span><span>FastAPI</span><span>Flask</span><span>Pydantic</span><span>Node.js</span><span>Spring Boot</span><span>React / Redux</span><span>REST</span><span>Swagger / OpenAPI</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Cloud &amp; MLOps</h3>
+            <div class="tags tags-lg">
+              <span>AWS (EKS, ECS, ECR, Lambda, S3, Glue, Step Functions)</span><span>Bedrock</span><span>SageMaker</span><span>CloudWatch</span><span>Azure ML</span><span>Azure DevOps</span><span>ACR</span><span>Docker</span><span>Kubernetes</span><span>Karpenter</span><span>Helm</span><span>Terraform</span><span>GitHub Actions</span><span>Git</span>
+            </div>
+          </div>
+
+          <div class="skill-row reveal">
+            <h3 class="skill-cat">Models</h3>
+            <div class="tags tags-lg">
+              <span>Claude</span><span>GPT-4o</span><span>Llama 3.x</span><span>Nemotron 49B</span><span>Mistral 7B</span><span>Qwen</span><span>DeBERTa</span><span>CLIP</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
-    <section id="projects" class="section section-alt">
+    <!-- ─────────────────────────── EDUCATION ─────────────────────────── -->
+    <section class="section" id="education">
       <div class="container">
-        <div class="sec-header reveal">
-          <span class="mono-label">03 /</span>
-          <h2 class="sec-title">Projects</h2>
-          <p class="sec-sub">Things I've designed and shipped</p>
-        </div>
-
-        <div class="bento">
-          <!-- Aggie RAG Chatbot — large card -->
-          <div class="bento-card bento-lg reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                  />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/BalajiPillalamarri/uga-extension-rag-chatbot"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">01</span>
-            <h3 class="bento-title">Aggie</h3>
-            <p class="bento-sub">
-              UGA Extension Conversational AI — RAG Chatbot
-            </p>
-            <p class="bento-desc">
-              Built a Retrieval-Augmented Generation pipeline over 5,000+
-              documents using crawl4ai + Playwright for ingestion, LlamaIndex
-              chunking, sentence-transformers embeddings, and ChromaDB cosine
-              similarity search — with fully local inference at zero API cost.
-            </p>
-            <ul class="bento-highlights">
-              <li>
-                Streamed Llama 3.3 70B (via Groq) responses over SSE through a
-                FastAPI backend
-              </li>
-              <li>
-                Hallucination mitigation via retrieval score thresholding,
-                chunk-level filtering, and prompt guardrails
-              </li>
-              <li>
-                Next.js 14 chat UI with real-time token streaming, source
-                citations, and metadata-filtered semantic search
-              </li>
-            </ul>
-            <div class="tag-row">
-              <span class="tag">RAG</span><span class="tag">LlamaIndex</span
-              ><span class="tag">ChromaDB</span><span class="tag">FastAPI</span
-              ><span class="tag">Next.js</span><span class="tag">Llama 3.3</span
-              ><span class="tag">SSE</span>
-            </div>
-          </div>
-
-          <!-- Smart Unblocker — small card -->
-          <div class="bento-card bento-sm reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <rect x="3" y="11" width="18" height="11" rx="2" />
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/BalajiPillalamarri/Unblockr"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">02</span>
-            <h3 class="bento-title">Smart Unblocker</h3>
-            <p class="bento-sub">AI-Powered Parking Block Detection</p>
-            <p class="bento-desc">
-              Cross-platform Flutter app with a FastAPI backend enabling
-              image-based vehicle reporting. Hybrid ML pipeline combining Vision
-              Transformers (CLIP), pretrained vehicle detection, and
-              geometry-based reasoning to determine blocking from a single scene
-              image.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Flutter</span><span class="tag">FastAPI</span
-              ><span class="tag">CLIP</span><span class="tag">OCR</span
-              ><span class="tag">Python</span>
-            </div>
-          </div>
-
-          <!-- Road Surface Detection — small card -->
-          <div class="bento-card bento-sm reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path d="M2 20h20" />
-                  <path d="M4 20V10l4-6 4 6 4-4 4 4v10" />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/BalajiPillalamarri/road-surface-detection"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">03</span>
-            <h3 class="bento-title">Road Surface Detection</h3>
-            <p class="bento-sub">Deep Learning Segmentation</p>
-            <p class="bento-desc">
-              ResNet34 + U-Net segmentation model for road damage detection.
-              Achieved 97.75% pixel accuracy with a
-              <strong>20% IoU improvement</strong> via transfer learning.
-              Deployed as a Streamlit web app for real-time inference and damage
-              visualization.
-            </p>
-            <div class="bento-metric">
-              <span class="metric-val"
-                >97.75<span class="metric-unit">%</span></span
-              >
-              <span class="metric-lbl">Accuracy</span>
-            </div>
-            <div class="tag-row">
-              <span class="tag">PyTorch</span><span class="tag">ResNet34</span
-              ><span class="tag">U-Net</span
-              ><span class="tag">Transfer Learning</span
-              ><span class="tag">Streamlit</span>
-            </div>
-          </div>
-
-          <!-- Multispectral Data Pipeline — small card -->
-          <div class="bento-card bento-sm reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
-                  />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/BalajiPillalamarri/multispectral-data-pipeline"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">04</span>
-            <h3 class="bento-title">Multispectral Data Pipeline</h3>
-            <p class="bento-sub">Drone Imagery ETL</p>
-            <p class="bento-desc">
-              End-to-end data pipeline that automatically ingests multispectral
-              drone imagery from field sensors and uploads to cloud storage —
-              the foundation for downstream ML training workflows in precision
-              agriculture.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">AWS S3</span
-              ><span class="tag">ETL</span
-              ><span class="tag">Drone Imagery</span>
-            </div>
-          </div>
-
-          <!-- Khabar — small card -->
-          <div class="bento-card bento-sm reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
-                  />
-                  <path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6Z" />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/BalajiPillalamarri/khabar"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">05</span>
-            <h3 class="bento-title">Khabar</h3>
-            <p class="bento-sub">Online News App</p>
-            <p class="bento-desc">
-              Online news app with the ability to read the latest news and
-              publish your own stories — combining real-time news aggregation
-              with user-generated content in a Flutter mobile experience.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Flutter</span><span class="tag">Dart</span
-              ><span class="tag">Firebase</span>
-            </div>
-          </div>
-
-          <!-- RideShareApp — small card -->
-          <div class="bento-card bento-sm reveal">
-            <div class="card-glow"></div>
-            <div class="bento-top">
-              <div class="bento-icon-wrap">
-                <svg
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                >
-                  <path
-                    d="M19 17H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11l3 4v6a2 2 0 0 1-2 2z"
-                  />
-                  <circle cx="7.5" cy="17.5" r="1.5" />
-                  <circle cx="16.5" cy="17.5" r="1.5" />
-                </svg>
-              </div>
-              <a
-                href="https://github.com/Yash8576/RideShareApp"
-                target="_blank"
-                rel="noopener"
-                class="bento-ext"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.5"
-                >
-                  <path
-                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                  />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <span class="bento-num">06</span>
-            <h3 class="bento-title">RideShare App</h3>
-            <p class="bento-sub">Collaborative Ride Sharing</p>
-            <p class="bento-desc">
-              Collaborative ride-sharing mobile application enabling real-time
-              carpooling coordination, route matching, and trip management
-              between drivers and passengers.
-            </p>
-            <div class="tag-row">
-              <span class="tag">Java</span><span class="tag">Android</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="sec-header reveal">
-          <span class="mono-label">04 /</span>
-          <h2 class="sec-title">Skills</h2>
-          <p class="sec-sub">Technologies I work with</p>
-        </div>
-
-        <div class="skills-rows">
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="16 18 22 12 16 6" />
-                <polyline points="8 6 2 12 8 18" />
-              </svg>
-              Languages
-            </div>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">Java</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Dart</span>
-              <span class="chip">Bash</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
-                />
-              </svg>
-              LLMs &amp; Generative AI
-            </div>
-            <div class="chips">
-              <span class="chip chip-v">OpenAI API</span>
-              <span class="chip chip-v">Anthropic API</span>
-              <span class="chip chip-v">Google Gemini API</span>
-              <span class="chip chip-v">Hugging Face Transformers</span>
-              <span class="chip">Llama</span>
-              <span class="chip">Mistral</span>
-              <span class="chip">Whisper</span>
-              <span class="chip">Fine-Tuning</span>
-              <span class="chip">LoRA / QLoRA / PEFT</span>
-              <span class="chip">Prompt Engineering</span>
-              <span class="chip">Function Calling</span>
-              <span class="chip">Structured Output</span>
-              <span class="chip">Streaming (SSE)</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="3" />
-                <path
-                  d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"
-                />
-              </svg>
-              Agentic AI &amp; RAG
-            </div>
-            <div class="chips">
-              <span class="chip chip-v">LangChain</span>
-              <span class="chip chip-v">LangGraph</span>
-              <span class="chip chip-v">LlamaIndex</span>
-              <span class="chip chip-v">Model Context Protocol (MCP)</span>
-              <span class="chip">AI Agents</span>
-              <span class="chip">Tool Use</span>
-              <span class="chip">RAG Pipelines</span>
-              <span class="chip">Hybrid Search</span>
-              <span class="chip">Reranking</span>
-              <span class="chip">Context Engineering</span>
-              <span class="chip">Hallucination Mitigation</span>
-              <span class="chip">Guardrails</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <ellipse cx="12" cy="5" rx="9" ry="3" />
-                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-              </svg>
-              Vector Stores &amp; Embeddings
-            </div>
-            <div class="chips">
-              <span class="chip chip-v">ChromaDB</span>
-              <span class="chip chip-v">FAISS</span>
-              <span class="chip chip-v">Pinecone</span>
-              <span class="chip">Weaviate</span>
-              <span class="chip">pgvector</span>
-              <span class="chip">sentence-transformers</span>
-              <span class="chip">Semantic Search</span>
-              <span class="chip">Embedding-based Retrieval</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                <path d="M2 17l10 5 10-5" />
-                <path d="M2 12l10 5 10-5" />
-              </svg>
-              Machine Learning &amp; Computer Vision
-            </div>
-            <div class="chips">
-              <span class="chip chip-v">PyTorch</span>
-              <span class="chip chip-v">TensorFlow</span>
-              <span class="chip chip-v">scikit-learn</span>
-              <span class="chip">NumPy</span>
-              <span class="chip">Pandas</span>
-              <span class="chip chip-c">CUDA</span>
-              <span class="chip">YOLO</span>
-              <span class="chip">U-Net</span>
-              <span class="chip">ResNet</span>
-              <span class="chip">OpenCV</span>
-              <span class="chip">CLIP</span>
-              <span class="chip">Vision Transformers (ViT)</span>
-              <span class="chip">Vision–Language Models</span>
-              <span class="chip">Image Segmentation</span>
-              <span class="chip">OCR</span>
-              <span class="chip">Distributed Training</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="2" y="3" width="20" height="14" rx="2" />
-                <line x1="8" y1="21" x2="16" y2="21" />
-                <line x1="12" y1="17" x2="12" y2="21" />
-              </svg>
-              Backend &amp; APIs
-            </div>
-            <div class="chips">
-              <span class="chip">FastAPI</span>
-              <span class="chip">Spring Boot</span>
-              <span class="chip">Flask</span>
-              <span class="chip">REST APIs</span>
-              <span class="chip">gRPC</span>
-              <span class="chip">GraphQL</span>
-              <span class="chip">Microservices</span>
-              <span class="chip">Pydantic</span>
-              <span class="chip">async/await</span>
-              <span class="chip">Redis</span>
-              <span class="chip">JWT</span>
-              <span class="chip">RBAC</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-              MLOps &amp; Cloud
-            </div>
-            <div class="chips">
-              <span class="chip">Docker</span>
-              <span class="chip">Kubernetes</span>
-              <span class="chip">MLflow</span>
-              <span class="chip">Weights &amp; Biases</span>
-              <span class="chip">LangSmith</span>
-              <span class="chip">CI/CD</span>
-              <span class="chip">GitHub Actions</span>
-              <span class="chip chip-c"
-                >AWS (S3, EC2, ECS, Lambda, Bedrock, SageMaker)</span
-              >
-              <span class="chip chip-c">GCP (Vertex AI)</span>
-              <span class="chip">Pulumi (IaC)</span>
-              <span class="chip">Linux / HPC</span>
-              <span class="chip">vLLM</span>
-              <span class="chip">Model Serving</span>
-            </div>
-          </div>
-
-          <div class="skill-row reveal">
-            <div class="skill-cat">
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-                <path d="M3 9h18M9 21V9" />
-              </svg>
-              Data &amp; Frontend
-            </div>
-            <div class="chips">
-              <span class="chip">PostgreSQL</span>
-              <span class="chip">MongoDB</span>
-              <span class="chip">Firebase / Firestore</span>
-              <span class="chip">Airflow</span>
-              <span class="chip chip-v">Next.js</span>
-              <span class="chip chip-v">React</span>
-              <span class="chip chip-v">Flutter</span>
-              <span class="chip">React Native</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
-    <section id="education" class="section section-alt">
-      <div class="container">
-        <div class="sec-header reveal">
-          <span class="mono-label">05 /</span>
-          <h2 class="sec-title">Education</h2>
-          <p class="sec-sub">Academic foundations</p>
+        <div class="sec-head reveal">
+          <span class="mono label">05 / Education &amp; credentials</span>
+          <h2 class="sec-title">Foundations</h2>
         </div>
 
         <div class="edu-grid">
-          <div class="edu-card reveal">
-            <div class="card-glow"></div>
-            <div class="edu-num">01</div>
-            <div class="edu-body">
-              <span class="edu-level-badge">Master's</span>
-              <h3 class="edu-degree">M.S. Computer Science</h3>
-              <p class="edu-school">University of Georgia</p>
-              <p class="edu-focus">AI &amp; Machine Learning</p>
+          <article class="edu-card reveal">
+            <span class="chip chip-sage">Master's</span>
+            <h3>M.S. Computer Science</h3>
+            <p class="edu-school">University of Georgia</p>
+            <div class="edu-gpa">
+              <span class="gpa-num">3.8</span>
+              <span class="mono muted">/ 4.0 CGPA</span>
             </div>
-            <div class="edu-gpa-block">
-              <span class="gpa-big">3.80</span>
-              <span class="gpa-label">GPA</span>
-            </div>
-          </div>
+          </article>
 
-          <div class="edu-card reveal">
-            <div class="card-glow"></div>
-            <div class="edu-num">02</div>
-            <div class="edu-body">
-              <span class="edu-level-badge">Bachelor's</span>
-              <h3 class="edu-degree">B.Tech. Information Technology</h3>
-              <p class="edu-school">University of Delhi</p>
-              <p class="edu-focus">Software Engineering</p>
-            </div>
-            <div class="edu-gpa-block">
-              <span class="gpa-big">3.87</span>
-              <span class="gpa-label">GPA</span>
-            </div>
-          </div>
+          <article class="cert-card reveal">
+            <span class="chip chip-sky">Certifications</span>
+            <ul class="cert-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                Databricks Certified Generative AI Engineer Associate
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                AWS Certified Machine Learning Engineer — Associate (MLA-C01)
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
-    <section id="contact" class="section contact-section">
-      <div class="contact-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-      </div>
+    <!-- ─────────────────────────── CONTACT ─────────────────────────── -->
+    <section class="section contact" id="contact">
       <div class="container">
         <div class="contact-box reveal">
-          <span class="mono-label">06 / Let's Connect</span>
+          <span class="mono label">06 / Contact</span>
           <h2 class="contact-title">
-            Open to AI/ML<br /><span class="gradient-text">Opportunities</span>
+            Let's build something<br /><em>worth shipping.</em>
           </h2>
-          <p class="contact-desc">
-            Actively seeking AI/ML engineering and research roles. Whether it's
-            a full-time position, a research collaboration, or just a
-            conversation about deep learning — I'd love to hear from you.
+          <p class="contact-sub">
+            Open to AI engineering roles working on agents, retrieval, and the
+            evaluation systems that keep them honest. Based in San Jose, CA —
+            happy to talk remote or hybrid.
           </p>
+
           <div class="contact-actions">
-            <a
-              href="mailto:balajipillalamarri100@gmail.com"
-              class="btn-primary btn-xl magnetic"
-            >
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-              <span>Say Hello</span>
+            <a href="mailto:balajipillalamarri01@gmail.com" class="btn btn-primary btn-lg">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2.5" /><path d="m22 7.5-9.1 5.6a1.8 1.8 0 0 1-1.8 0L2 7.5" /></svg>
+              balajipillalamarri01@gmail.com
             </a>
-            <div class="contact-socials">
-              <a
-                href="https://github.com/BalajiPillalamarri"
-                target="_blank"
-                rel="noopener"
-                class="cs-icon"
-                aria-label="GitHub"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/balajipillalamarri/"
-                target="_blank"
-                rel="noopener"
-                class="cs-icon"
-                aria-label="LinkedIn"
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                  />
-                </svg>
-              </a>
-            </div>
+            <a href="tel:+17063727945" class="btn btn-lg">+1 706 372 7945</a>
+          </div>
+
+          <div class="contact-links">
+            <a href="https://github.com/BalajiPillalamarri" target="_blank" rel="noopener">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/balaji30p" target="_blank" rel="noopener">LinkedIn ↗</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="container footer-inner">
-        <span class="footer-name">Balaji Pillalamarri</span>
-        <span class="footer-dot">·</span>
-        <span class="footer-loc">Open to relocate</span>
+        <span>© <span id="year">2026</span> Balaji Pillalamarri</span>
+        <span class="mono muted">San Jose, CA · Open to relocate</span>
       </div>
     </footer>
 
